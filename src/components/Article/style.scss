@@ -1,0 +1,22 @@
+.article {
+  &-title {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+    border-left: 4px solid #8e44ad;
+    padding-left: 1rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: rgba(255, 255, 255, .3);
+      margin-top: 1rem;
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+}
