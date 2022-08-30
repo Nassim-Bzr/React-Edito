@@ -1,11 +1,33 @@
+import { useDispatch } from 'react-redux';
 import './style.scss';
 
 function Tools() {
+  const dispatch = useDispatch();
   return (
     <footer className="tools">
       Taille du texte :
-      <button className="active" type="button">Petit</button>
-      <button type="button">Grand</button>
+      <button
+
+        type="button"
+        onClick={() => {
+          dispatch({
+            type: 'CHANGE_ISSMALL',
+            payload: true,
+          });
+        }}
+      >
+        Petit
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          dispatch({
+            type: 'CHANGE_ISSMALL',
+            payload: false,
+          });
+        }}
+      >Grand
+      </button>
     </footer>
   );
 }
